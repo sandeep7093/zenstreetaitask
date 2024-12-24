@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 238 44% 54%;
+    --card: 0 0% 100%;
+    --card-foreground: 238 44% 54%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 238 44% 54%;
+    --primary: 238 44% 54%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 238 44% 96%;
+    --secondary-foreground: 238 44% 54%;
+    --muted: 238 44% 96%;
+    --muted-foreground: 238 44% 54%;
+    --accent: 238 44% 96%;
+    --accent-foreground: 238 44% 54%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 238 44% 90%;
+    /* --input: 238 44% 90%;
+    --ring: 238 44% 54%; */
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    /* --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%; */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground min-h-screen;
+    background: linear-gradient(135deg, #ffffff 0%, #f3f4f6 100%);
+  }
+
+  .dark body {
+    background-image: url('https://www.onec1.com/hubfs/WFH-Cyber-Attacks-TL-Article.jpeg'); /* Replace with your URL */
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+/* Button click animation */
+.button-transition {
+  transition: background-color 0.3s ease;
+}
+
+.button-transition:active {
+  background-color: hsl(45 93% 47%); /* Yellow color on click */
+}
